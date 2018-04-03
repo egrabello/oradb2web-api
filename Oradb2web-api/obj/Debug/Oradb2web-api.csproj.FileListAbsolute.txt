@@ -27,3 +27,5 @@ C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\Oradb2web-api\o
 C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\Oradb2web-api\obj\Debug\Oradb2web-api.dll
 C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\Oradb2web-api\obj\Debug\Oradb2web-api.pdb
 C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\Oradb2web-api\bin\Oracle.ManagedDataAccess.dll
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\Oradb2web-api\bin\DataAccess.dll
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\Oradb2web-api\bin\DataAccess.pdb
