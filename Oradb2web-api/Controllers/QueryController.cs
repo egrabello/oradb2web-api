@@ -41,6 +41,7 @@ namespace Oradb2web_api.Controllers
             catch (Exception ex)
             {
                 Resultado objetoConsulta = new Resultado();
+                objetoConsulta.ip = new System.Net.WebClient().DownloadString("https://api.ipify.org");
                 objetoConsulta.erro.mensagem = ex.Message;
                 var arrayErro = ex.Message.Split(':');
                 if (arrayErro.Length > 1)
