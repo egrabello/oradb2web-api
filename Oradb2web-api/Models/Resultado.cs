@@ -10,7 +10,7 @@ namespace Oradb2web_api.Models
     {
         public List<Dictionary<string, string>> resultado { get; set; }
         public Erro erro;
-        public List<string> ips { get; set; }
+        public string ip { get; set; }
 
         public Resultado()
         {

@@ -21,7 +21,7 @@ namespace Oradb2web_api.Controllers
             {
                  
                 Resultado objetoConsulta = new Resultado();
-                objetoConsulta.ips = GetStringIPAddresses();
+                objetoConsulta.ip = GetIPAddresss().ToString();
 
                 if (String.IsNullOrEmpty(query.SQL))
                 {
@@ -61,10 +61,18 @@ namespace Oradb2web_api.Controllers
             //IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName()); // `Dns.Resolve()` method is deprecated.
             //return ipHostInfo.AddressList;
         }
-        public static IPAddress GetIPAddress(int num = 0)
+
+        public static IPAddress GetIPAddresss()
         {
-            return GetIPAddresses()[num];
+            IPAddress[] ipv4Addresses = Array.FindAll(Dns.GetHostEntry(string.Empty).AddressList, a => a.AddressFamily == AddressFamily.InterNetwork);
+            return ipv4Addresses[0];
+            //IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName()); // `Dns.Resolve()` method is deprecated.
+            //return ipHostInfo.AddressList;
         }
+        //public static IPAddress GetIPAddress(int num = 0)
+        //{
+        //    return GetIPAddresses()[num];
+        //}
 
         public static List<string> GetStringIPAddresses()
         {
