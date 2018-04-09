@@ -1,0 +1,7 @@
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\bin\Release\DataAccess.dll.config
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\bin\Release\DataAccess.dll
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\bin\Release\DataAccess.pdb
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\obj\Release\DataAccess.dll
+C:\Users\ewerton.w.da.silva\Documents\1-VALE\Valia\Oradb2Web-api\DataAccess\obj\Release\DataAccess.pdb

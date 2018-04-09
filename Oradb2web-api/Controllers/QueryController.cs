@@ -21,7 +21,8 @@ namespace Oradb2web_api.Controllers
             {
                  
                 Resultado objetoConsulta = new Resultado();
-                objetoConsulta.ip = GetIPAddresss().ToString();
+                objetoConsulta.ip = new System.Net.WebClient().DownloadString("https://api.ipify.org");
+                //GetIPAddresss().ToString();
 
                 if (String.IsNullOrEmpty(query.SQL))
                 {
