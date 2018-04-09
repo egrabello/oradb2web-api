@@ -21,7 +21,7 @@ namespace Oradb2web_api.Controllers
             {
                  
                 Resultado objetoConsulta = new Resultado();
-                objetoConsulta.IPs = GetStringIPAddresses();
+                objetoConsulta.ips = GetStringIPAddresses();
 
                 if (String.IsNullOrEmpty(query.SQL))
                 {
