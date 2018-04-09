@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Web.Http;
 
@@ -18,12 +19,15 @@ namespace Oradb2web_api.Controllers
         {
             try
             {
+                 
                 Resultado objetoConsulta = new Resultado();
-               
+                objetoConsulta.IPs = GetStringIPAddresses();
+
                 if (String.IsNullOrEmpty(query.SQL))
                 {
                     objetoConsulta.erro.codigo = "0";
                     objetoConsulta.erro.mensagem = "A query não pode estar vazia";
+                    
                     return Request.CreateResponse(HttpStatusCode.OK, objetoConsulta);
                 }
 
@@ -48,6 +52,30 @@ namespace Oradb2web_api.Controllers
                
             }
 
+        }
+
+        public static IPAddress[] GetIPAddresses()
+        {
+            IPAddress[] ipv4Addresses = Array.FindAll(Dns.GetHostEntry(string.Empty).AddressList, a => a.AddressFamily == AddressFamily.InterNetwork);
+            return ipv4Addresses;
+            //IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName()); // `Dns.Resolve()` method is deprecated.
+            //return ipHostInfo.AddressList;
+        }
+        public static IPAddress GetIPAddress(int num = 0)
+        {
+            return GetIPAddresses()[num];
+        }
+
+        public static List<string> GetStringIPAddresses()
+        {
+            List<string> ips = new List<string>();
+            IPAddress[] adresses = GetIPAddresses();
+            for (int i = 0; i < adresses.Length; i++)
+            {
+                ips.Add(adresses[i].ToString());
+            }
+
+            return ips;
         }
     }
 }

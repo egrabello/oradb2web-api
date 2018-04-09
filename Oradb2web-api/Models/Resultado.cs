@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 
 namespace Oradb2web_api.Models
@@ -9,6 +10,7 @@ namespace Oradb2web_api.Models
     {
         public List<Dictionary<string, string>> resultado { get; set; }
         public Erro erro;
+        public List<string> IPs { get; set; }
 
         public Resultado()
         {
