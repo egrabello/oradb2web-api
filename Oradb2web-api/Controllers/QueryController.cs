@@ -48,8 +48,7 @@ namespace Oradb2web_api.Controllers
                 {
                     objetoConsulta.erro.codigo = ex.Message.Split(':')[0];
                     objetoConsulta.erro.mensagem = ex.Message.Split(':')[1].Trim();
-                }
-                
+                }                
                 return Request.CreateResponse(HttpStatusCode.OK, objetoConsulta);
                
             }
