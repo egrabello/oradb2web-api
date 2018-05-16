@@ -15,7 +15,7 @@ namespace Oradb2web_api.Controllers
     public class QueryController : ApiController
     {
         // POST api/<controller>
-        public async Task<HttpResponseMessage> Post([FromBody]Query query)
+        public async Task<HttpResponseMessage> Post([FromBody]QueryInfo query)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace Oradb2web_api.Controllers
                 }
 
                 QueriesHandler qh = new QueriesHandler();
-                var resultadoConsulta = await qh.Query(query.SQL);
+                var resultadoConsulta = await qh.Query(query.SQL, query?.ConnectionName);
                 objetoConsulta.resultado = resultadoConsulta;
                 return Request.CreateResponse(HttpStatusCode.OK, objetoConsulta);
                 

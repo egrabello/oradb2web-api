@@ -12,11 +12,13 @@ namespace DataAccess
 {
     public class QueriesHandler
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["oracle_db"].ToString();
+        
         
                 
-        public async Task<List<Dictionary<string, string>>> Query(string query)
+        public async Task<List<Dictionary<string, string>>> Query(string query, string connectionName)
         {
+            connectionName = String.IsNullOrEmpty(connectionName) ? "oracle_db" : connectionName;
+            string connectionString = ConfigurationManager.ConnectionStrings[connectionName].ToString();
             var rowsResult = await Task.Run(() =>
             {
                 try

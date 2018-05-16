@@ -95,7 +95,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Query.cs" />
+    <Compile Include="Models\QueryInfo.cs" />
     <Compile Include="Models\Resultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
